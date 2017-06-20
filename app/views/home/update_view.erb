@@ -1,0 +1,21 @@
+<h1>수정하기</h1>
+
+<body style="
+    margin-top: 50px;
+    margin-left: 90px;
+    margin-right: 90px;
+">
+    
+<form action="/update/<%= @one_reply.id %>" method="post">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Problem</label>
+        <input name="problem" type="text" value="<%= @one_reply.problem%>" class="form-control" id="exampleInputEmail1" placeholder="Problem">
+    </div>
+    <div class="form-group">
+        <label for="comment">Answer</label>
+        <textarea name="answer" class="form-control" rows="5" id="answer" placeholder="Answer"><%= @one_reply.answer %></textarea>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+</body>
